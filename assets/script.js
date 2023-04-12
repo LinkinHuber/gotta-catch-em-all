@@ -6,7 +6,6 @@ async function fetchPokemon(){
   console.log(data)
 }
 
-selectPokemon ();
 
 
 
