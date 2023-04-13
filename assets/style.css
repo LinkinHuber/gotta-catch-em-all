@@ -1,15 +1,15 @@
 .header1 {
+  font-size: 2rem;
   margin: 10px 10px 0px 10px;
-  padding: 25px;
+  padding: 0px;
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
   justify-content: center;
   background-color: yellow;
   border: 10px solid black;
 }
 
-
+/*
 .h21 {
   margin: 10x 10px 0px 10px;
   padding: 25px;
@@ -18,7 +18,21 @@
   background-color: yellow;
   border: 10px solid black;
 }
+*/ 
 
+.main1 {
+  margin: 10px 10px 0px 10px;
+  padding: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: yellow;
+  border: 10px solid black;
+  justify-content: center;
+  
+}
+
+
+/*
 .input1{
 	text-align: center;
 	margin: 0;
@@ -37,11 +51,14 @@
 	top: 50%;
 	left: 40%
 }
+*/
 
 .footer1 {
+  font-size: 1.5rem;
   margin: 10px;
   padding: 25px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   background-color: yellow;
   border: 10px solid black;
