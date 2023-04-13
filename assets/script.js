@@ -21,3 +21,8 @@ async function fetchPokemon(){
   console.log(pokemonName);
   console.log(data)
 }
+
+document.getElementById('search-btn1').addEventListener('click', function(event) {
+  event.preventDefault()
+  const TextValue = document.querySelector("input").value
+  console.log(TextValue)});
