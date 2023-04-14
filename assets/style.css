@@ -5,19 +5,22 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: yellow;
+  background-color: #ffde00;
   border: 10px solid black;
+  color: #3b4cca;
+  flex-shrink: 1;
 }
 
 
-/* .h21 {
+ .h21 {
   margin: 10x 10px 0px 10px;
-  padding: 25px;
-  display: flex;
+  font-size: 3rem;
+  display: contents;
 	justify-content: center;
-  background-color: yellow;
-  border: 10px solid black;
-} */
+  color: #3b4cca;
+  background-color: #ffde00;
+  flex-shrink: 1;
+}
 
 
 .main1 {
@@ -25,41 +28,48 @@
   padding: 95px;
   display: flex;
   flex-wrap: wrap;
-  background-color: yellow;
+  background-color: #ffde00;
+  background-image: url("https://wallpapers.com/images/featured-full/pokemon-hd-pictures-fazqcs1tmwwte1ap.jpg");
+  background-size: cover;
   border: 10px solid black;
   justify-content: center;
-  
+  flex-shrink: 1;
 }
 
 .p1 {
+  background-color: #ff0000;
   display: inline-block;
   margin-left: 300px;
   margin-right: 300px;
+  flex-shrink: 1;
 }
 
 
 .input1 {
 	height: 2rem;
+  text-align: center;
 
 }
 
 .button1{
   height: 2.25rem;
-	background-color: yellow;
+	background-color: #ffde00;
 	
 }
 
 
 .footer1 {
   position: absolute;
-  bottom: 0;
-  width: 100%;
+  bottom: 5;
+  width: 91.5%;
   font-size: 1.5rem;
-  margin-right: 50px;
+  margin: 10px 10px 0px 10px; 
   padding: 25px;
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap; 
   justify-content: center;
-  background-color: yellow;
+  background-color: #ffde00;
+  color: #3b4cca;
   border: 10px solid black;
+  flex-shrink: 1;
 }
