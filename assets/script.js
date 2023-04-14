@@ -1,6 +1,5 @@
 var pokemonName;
 var pokemonSearch = "";
-
   
 async function fetchPokemon(){
   var api = "https://pokeapi.co/api/v2/pokemon/" + pokemonSearch
@@ -15,7 +14,10 @@ async function fetchPokemon(){
   console.log(pokemonHeight);
   console.log(urlArtwork);
   console.log(data);
+  var pic =  document.getElementById("result-img1")
+  pic.src = urlArtwork;
 }
+
 
 var queryString = "./secondpageindex.html";
 
