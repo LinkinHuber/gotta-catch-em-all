@@ -6,10 +6,12 @@ async function fetchPokemon(){
   var response = await fetch(api);
   var data = await response.json();
   var urlArtwork = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + data.id + ".png";
-  var pokemon = data;
-  console.log(pokemon.name);
-  console.log(pokemon.weight);
-  console.log(pokemon.height);
+  var pokemonName = data.name;
+  var pokemonWeight = data.weight;
+  var pokemonHeight = data.height;
+  console.log(pokemonName);
+  console.log(pokemonWeight);
+  console.log(pokemonHeight);
   console.log(urlArtwork);
   console.log(data);
   var pic =  document.getElementById("result-img1")
@@ -26,3 +28,7 @@ document.getElementById('search-btn1').addEventListener('click', function(event)
   fetchPokemon()
   location.assign(queryString);
 });
+
+{
+localStorage.setItem('pokemon', JSON.stringify(pokemon)); 
+}
