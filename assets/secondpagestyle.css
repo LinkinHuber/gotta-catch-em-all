@@ -1,0 +1,52 @@
+.header1 {
+  font-size: 2rem;
+  margin: 10px 10px 0px 10px;
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: yellow;
+  border: 10px solid black;
+}
+
+.aside1 {
+  margin: 10px 10px 0px 10px;
+  padding: 25px;
+  float: left;
+  background-color: yellow;
+  border: 10px solid black;
+  justify-content: center;
+  
+}
+
+.main2 {
+  margin: 10px 10px 0px 10px;
+  padding: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: right;
+  background-color: yellow;
+  border: 10px solid black;
+}
+
+.div1 {
+  border: 10px solid black;
+  margin-right: 10px;
+  padding: 25px;
+}
+
+.img1 {
+  border: 10px solid black;
+  
+}
+
+.footer1 {
+  font-size: 1.5rem;
+  margin: 10px;
+  padding: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: yellow;
+  border: 10px solid black;
+}
