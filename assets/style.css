@@ -9,20 +9,20 @@
   border: 10px solid black;
 }
 
-/*
-.h21 {
+
+/* .h21 {
   margin: 10x 10px 0px 10px;
   padding: 25px;
   display: flex;
 	justify-content: center;
   background-color: yellow;
   border: 10px solid black;
-}
-*/ 
+} */
+
 
 .main1 {
   margin: 10px 10px 0px 10px;
-  padding: 25px;
+  padding: 95px;
   display: flex;
   flex-wrap: wrap;
   background-color: yellow;
@@ -31,31 +31,34 @@
   
 }
 
+.p1 {
+  display: inline-block;
+  margin-left: 300px;
+  margin-right: 300px;
+}
 
-/*
-.input1{
-	text-align: center;
-	margin: 0;
-	position: absolute;
-	top: 50%;
-	left: 45%
+
+.input1 {
+	height: 2rem;
+
 }
+
 .button1{
+  height: 2.25rem;
 	background-color: yellow;
-	text-align: center;
-	margin: 0;
-	position: absolute;
-	top: 50%;
-	left: 40%
+	
 }
-*/
+
 
 .footer1 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
   font-size: 1.5rem;
-  margin: 10px;
+  margin-right: 50px;
   padding: 25px;
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: center;
   background-color: yellow;
   border: 10px solid black;
