@@ -6,12 +6,10 @@ async function fetchPokemon(){
   var response = await fetch(api);
   var data = await response.json();
   var urlArtwork = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + data.id + ".png";
-  var pokemonName = data.name;
-  var pokemonWeight = data.weight;
-  var pokemonHeight = data.height;
-  console.log(pokemonName);
-  console.log(pokemonWeight);
-  console.log(pokemonHeight);
+  var pokemon = data;
+  console.log(pokemon.name);
+  console.log(pokemon.weight);
+  console.log(pokemon.height);
   console.log(urlArtwork);
   console.log(data);
   var pic =  document.getElementById("result-img1")
