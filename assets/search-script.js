@@ -3,7 +3,7 @@ var pokemon;
 var pokemonSearch = "";
 var urlArtwork;
 
-document.getElementById('search-btn2').addEventListener('click', function(event) {
+document.getElementById("search-btn").addEventListener("click", function(event) {
   event.preventDefault();
   pokemonSearch = document.querySelector("input").value;
   fetchPokemon();
@@ -41,9 +41,12 @@ function displayPokemon(){
   document.getElementById("result-name").innerHTML = ("Name:" + " " + pokemon.name);
   document.getElementById("result-height").innerHTML = ("Height:" + " " + pokemon.height);
   document.getElementById("result-weight").innerHTML = ("Weight:" + " " + pokemon.weight);
+
   //document.getElementById("result-abilities").innerHTML = ("Abilities:" + " " + pokemon.abilities[0].ability.name + ", " + pokemon.abilities[1].ability.name);
   //if (pokemon.types[0].type.name && pokemon.types[0].type.name)
   // document.getElementById("result-type").innerHTML = ("Type:" + " " + pokemon.types[0].type.name + ", " + pokemon.types[1]?.type.name);
+  //var pic =  document.getElementById("result-img");
+  //pic.src = urlArtwork;
   document.getElementById("result-abilities").innerHTML = (parseAbilities(pokemon.abilities));
   document.getElementById("result-type").innerHTML = (parseTypes(pokemon.types));
 }
