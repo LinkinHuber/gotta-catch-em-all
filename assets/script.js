@@ -12,7 +12,7 @@ async function fetchPokemon(){
   console.log(pokemon.height);
   console.log(urlArtwork);
   console.log(data);
-  var pic =  document.getElementById("result-img1")
+  var pic =  document.getElementById("result-img")
   pic.src = urlArtwork;
 }
 
@@ -20,7 +20,7 @@ async function fetchPokemon(){
 var queryString = "./secondpageindex.html";
 
 
-document.getElementById('search-btn1').addEventListener('click', function(event) {
+document.getElementById("search-btn").addEventListener("click", function(event) {
   event.preventDefault()
   pokemonSearch = document.querySelector("input").value
   fetchPokemon()

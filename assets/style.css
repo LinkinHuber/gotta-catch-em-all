@@ -1,65 +1,59 @@
-.header1 {
+* {
+  box-sizing: border-box;
+  font-family: 'Bebas Neue', cursive;
+  font-family: 'Press Start 2P', cursive;
+}
+
+body {
+  background-image: url("./images/pokemon_card_wallpaper_by_shadowxofxlight_d31rl9w-fullview.jpg");
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.header {
+  margin-top: 15px;
+  margin-bottom: 15px;
   font-size: 2rem;
-  margin: 10px 10px 0px 10px;
-  padding: 0px;
+  letter-spacing: 5px;
+  min-width: fit-content;
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
-  background-color: yellow;
+  text-align: center;
+  background-color: white;
   border: 10px solid black;
 }
 
-
-/* .h21 {
-  margin: 10x 10px 0px 10px;
-  padding: 25px;
-  display: flex;
-	justify-content: center;
-  background-color: yellow;
-  border: 10px solid black;
-} */
-
-
-.main1 {
-  margin: 10px 10px 0px 10px;
-  padding: 95px;
-  display: flex;
-  flex-wrap: wrap;
-  background-color: yellow;
+.main {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  min-height: 750px;
+  background-color: white;
   border: 10px solid black;
   justify-content: center;
-  
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.p1 {
-  display: inline-block;
+.p {
   margin-left: 300px;
   margin-right: 300px;
 }
 
-
-.input1 {
-	height: 2rem;
-
+.input {
+  border: 5px solid black;
 }
 
-.button1{
-  height: 2.25rem;
-	background-color: yellow;
-	
+.button {
+  border: 5px solid black;
 }
 
-
-.footer1 {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  font-size: 1.5rem;
-  margin-right: 50px;
-  padding: 25px;
+.footer {
+  font-size: 1rem;
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   justify-content: center;
-  background-color: yellow;
+  text-align: center;
+  background-color: white;
   border: 10px solid black;
-}
+  }
