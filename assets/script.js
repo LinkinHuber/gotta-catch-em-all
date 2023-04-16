@@ -1,6 +1,5 @@
 var pokemonName;
 var pokemonSearch = "";
-  
 async function fetchPokemon(){
   var api = "https://pokeapi.co/api/v2/pokemon/" + pokemonSearch
   var response = await fetch(api);
@@ -26,3 +25,5 @@ document.getElementById("search-btn").addEventListener("click", function(event) 
   fetchPokemon()
   location.assign(queryString);
 });
+
+localStorage.setItem('pokemonSearch', JSON.stringify(pokemonSearch)); 
