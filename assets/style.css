@@ -5,7 +5,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: yellow;
+  background-color: rgb(251, 202, 60);
   border: 10px solid black;
 }
 
@@ -25,7 +25,7 @@
   padding: 95px;
   display: flex;
   flex-wrap: wrap;
-  background-color: yellow;
+  background-color: rgb(251, 202, 60);
   border: 10px solid black;
   justify-content: center;
   
@@ -51,15 +51,12 @@
 
 
 .footer1 {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  font-size: 1.5rem;
-  margin-right: 50px;
-  padding: 25px;
+  font-size: 2rem;
+  margin: 10px 10px 0px 10px;
+  padding: 0px;
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   justify-content: center;
-  background-color: yellow;
+  background-color: rgb(251, 202, 60);
   border: 10px solid black;
 }

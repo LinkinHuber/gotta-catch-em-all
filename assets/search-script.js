@@ -47,3 +47,4 @@ function displayPokemon(){
   document.getElementById("result-abilities").innerHTML = (parseAbilities(pokemon.abilities));
   document.getElementById("result-type").innerHTML = (parseTypes(pokemon.types));
 }
+localStorage.setItem('pokemon', JSON.stringify(pokemon)); 
