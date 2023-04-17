@@ -1,5 +1,7 @@
 var pokemonName;
 var pokemonSearch = "";
+
+
 async function fetchPokemon() {
   var api = "https://pokeapi.co/api/v2/pokemon/" + pokemonSearch;
   var response = await fetch(api);
