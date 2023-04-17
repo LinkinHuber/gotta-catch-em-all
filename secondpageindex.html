@@ -4,37 +4,38 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Press+Start+2P&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/secondpagestyle.css" />
-  <title>Gotta Catch Em All</title>
+  <title>Pokemon Search</title>
 </head>
 <body>
 
-  <header id="intro1" class="header1">
-    <h1 id="title1" class="h11">Gotta Catch Em All</h1>
+  <header id="intro" class="header">
+    <h1 id="title" class="h1">Pokemon Search</h1>
   </header>
-
-  <aside id="left1" class="aside1">
-    <h2 id="title2" class="h22">Search for more pokemon</h2>
-    <form id="search2" class="form2">
-      <input id="search-bar2" class="input2" type="text" placeholder="pokemon name">
-      <button id="search-btn2" class="button2">Search</button>
-    </form>
-  </aside> 
-
-  <main id="body2" class="main2">
-    <h3 id="search1" class="h31">Search Results...</h3>
-    <img id="result-img1" class="img1" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png" alt="Pic of pokemon"/>
-    <div id="result-content1" class="div1">
+  
+  <main id="body" class="main">
+    <section id="search-section" class="section1">
+      <h2 id="search-title" class="h2">Search for more pokemon...</h2>
+      <form id="search" class="form">
+        <input id="search-bar" class="input" type="text" placeholder="pokemon name">
+        <button id="search-btn" class="button">Search</button>
+      </form>
+    </section>
+    <section id="result-content" class="section2">
       <ul id="result-name"></ul>
       <ul id="result-height"></ul>
       <ul id="result-weight"></ul>
       <ul id="result-abilities"></ul>
       <ul id="result-type"></ul>
-    </div>
+    </section>
+    <img id="result-img" class="img" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png" alt="Pic of pokemon"/>
   </main>
 
-  <footer id="conclusion1" class="footer1">
-    <h4 id="by1" class="h41">By. Lucas, Jason, Patrick, Hana, and Linkin</h4>
+  <footer id="conclusion" class="footer">
+    <h3 id="by" class="h3">"Pokemon Search" was made by. Lucas, Jason, Patrick, Hana, and Linkin</h3>
   </footer>
 
   <script src="./assets/search-script.js"></script>
