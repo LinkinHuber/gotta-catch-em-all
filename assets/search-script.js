@@ -2,6 +2,7 @@ var pokemonName;
 var pokemon;
 var pokemonSearch = document.URL.split('=')[1];
 var urlArtwork;
+var RestrictSpaceSpecial
 var initialSearch = document.URL.split('=')[1]
 console.log(initialSearch)
 
@@ -30,6 +31,12 @@ async function fetchPokemon(){
   displayPokemon();
 
 }
+
+function RestrictSpaceSpecial(e) {
+  var k;
+  document.all ? k = e.keyCode : k = e.which;
+  return ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32 || (k >= 48 && k <= 57));
+  }
 
 function parseTypes(types) {
   var response = "Type: " + types[0].type.name;
