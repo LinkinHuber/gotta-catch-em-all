@@ -2,7 +2,7 @@ var pokemonName;
 var pokemon;
 var pokemonSearch = "";
 var urlArtwork;
-
+var RestrictSpaceSpecial
 document.getElementById("search-btn").addEventListener("click", function(event) {
   event.preventDefault();
   pokemonSearch = document.querySelector("input").value;
@@ -20,6 +20,16 @@ async function fetchPokemon(){
 
 }
 
+
+function RestrictSpaceSpecial(e) {
+  var k;
+  document.all ? k = e.keyCode : k = e.which;
+  return ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32 || (k >= 48 && k <= 57));
+  }
+
+
+
+
 function parseTypes(types) {
   var response = "Type: " + types[0].type.name;
   if (types.length > 1) {
@@ -34,6 +44,7 @@ function parseAbilities(abilities) {
   }
   return response;
 }
+
 
 function displayPokemon() {
   var pic = document.getElementById("result-img");
