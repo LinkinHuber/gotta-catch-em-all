@@ -1,13 +1,24 @@
 var pokemonName;
 var pokemon;
-var pokemonSearch = "";
+var pokemonSearch = document.URL.split('=')[1];
 var urlArtwork;
+var initialSearch = document.URL.split('=')[1]
+console.log(initialSearch)
+
+
 
 document.getElementById("search-btn").addEventListener("click", function(event) {
   event.preventDefault();
   pokemonSearch = document.querySelector("input").value;
+  aud_play_pause()
   fetchPokemon();
 });
+function aud_play_pause() {
+  var myAudio = document.getElementById("myAudio");
+  console.log(myAudio)
+    myAudio.play();
+
+}
 
 async function fetchPokemon(){
   var api = "https://pokeapi.co/api/v2/pokemon/" + pokemonSearch;
@@ -45,3 +56,4 @@ function displayPokemon() {
   document.getElementById("result-type").innerHTML = (parseTypes(pokemon.types));
 }
 localStorage.setItem('pokemon', JSON.stringify(pokemon)); 
+fetchPokemon()
