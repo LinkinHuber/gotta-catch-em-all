@@ -1,13 +1,25 @@
 var pokemonName;
 var pokemon;
-var pokemonSearch = "";
+var pokemonSearch = document.URL.split('=')[1];
 var urlArtwork;
 var RestrictSpaceSpecial
+var initialSearch = document.URL.split('=')[1]
+console.log(initialSearch)
+
+
+
 document.getElementById("search-btn").addEventListener("click", function(event) {
   event.preventDefault();
   pokemonSearch = document.querySelector("input").value;
+  aud_play_pause()
   fetchPokemon();
 });
+function aud_play_pause() {
+  var myAudio = document.getElementById("myAudio");
+  console.log(myAudio)
+    myAudio.play();
+
+}
 
 async function fetchPokemon(){
   var api = "https://pokeapi.co/api/v2/pokemon/" + pokemonSearch;
@@ -20,15 +32,11 @@ async function fetchPokemon(){
 
 }
 
-
 function RestrictSpaceSpecial(e) {
   var k;
   document.all ? k = e.keyCode : k = e.which;
   return ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32 || (k >= 48 && k <= 57));
   }
-
-
-
 
 function parseTypes(types) {
   var response = "Type: " + types[0].type.name;
@@ -45,7 +53,6 @@ function parseAbilities(abilities) {
   return response;
 }
 
-
 function displayPokemon() {
   var pic = document.getElementById("result-img");
   pic.src = urlArtwork;
@@ -56,3 +63,4 @@ function displayPokemon() {
   document.getElementById("result-type").innerHTML = (parseTypes(pokemon.types));
 }
 localStorage.setItem('pokemon', JSON.stringify(pokemon)); 
+fetchPokemon()
