@@ -10,7 +10,7 @@ document.getElementById("search-btn").addEventListener("click", function(event) 
 });
 
 async function fetchPokemon(){
-  var api = "https://pokeapi.co/api/v2/pokemon/" + pokemonSearch
+  var api = "https://pokeapi.co/api/v2/pokemon/" + pokemonSearch;
   var response = await fetch(api);
   var data = await response.json();
   urlArtwork = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + data.id + ".png";
@@ -21,32 +21,26 @@ async function fetchPokemon(){
 }
 
 function parseTypes(types) {
-  var response = "Type: " + types[0].type.name
+  var response = "Type: " + types[0].type.name;
   if (types.length > 1) {
-    response += ", " + types[1].type.name
+    response += ", " + types[1].type.name;
   }
   return response
 }
 function parseAbilities(abilities) {
-  var response = "Abilities: " + abilities[0].ability.name
+  var response = "Abilities: " + abilities[0].ability.name;
   if (abilities.length > 1) {
-    response += ", " + abilities[1].ability.name
+    response += ", " + abilities[1].ability.name;
   }
-  return response
+  return response;
 }
 
-function displayPokemon(){
-  var pic =  document.getElementById("result-img1")
+function displayPokemon() {
+  var pic = document.getElementById("result-img");
   pic.src = urlArtwork;
   document.getElementById("result-name").innerHTML = ("Name:" + " " + pokemon.name);
   document.getElementById("result-height").innerHTML = ("Height:" + " " + pokemon.height);
   document.getElementById("result-weight").innerHTML = ("Weight:" + " " + pokemon.weight);
-
-  //document.getElementById("result-abilities").innerHTML = ("Abilities:" + " " + pokemon.abilities[0].ability.name + ", " + pokemon.abilities[1].ability.name);
-  //if (pokemon.types[0].type.name && pokemon.types[0].type.name)
-  // document.getElementById("result-type").innerHTML = ("Type:" + " " + pokemon.types[0].type.name + ", " + pokemon.types[1]?.type.name);
-  //var pic =  document.getElementById("result-img");
-  //pic.src = urlArtwork;
   document.getElementById("result-abilities").innerHTML = (parseAbilities(pokemon.abilities));
   document.getElementById("result-type").innerHTML = (parseTypes(pokemon.types));
 }
