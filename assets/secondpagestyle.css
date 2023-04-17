@@ -23,30 +23,21 @@ body {
 }
 
 .main {
-  min-height: 600px;
   min-width: 420px;
   display: flex;
   flex-wrap: wrap;
   background-color: white;
+  flex-direction: row;
   border: 10px solid black;
 }
 
 .section1 {
-  min-width: 380px;
-  max-width: 50%;
-  padding-bottom: 10px;
   margin: 10px;
-  font-size: 1rem;
-  float: left;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
   text-align: center;
-  background-color: white;
-  border: 10px solid black;
-}
+} 
 
 .input {
+  margin-bottom: 10px;
   background-color: white;
   border: 5px solid black;
 }
@@ -57,26 +48,29 @@ body {
 }
 
 .section2 {
-  margin: 0px 0px 10px 10px;
-  min-width: 380px;
-  width: 50%;
-  font-size: 1.5rem;
-  display: flex;
+  padding: 10%;
+  font-size: 1.2rem;
   flex-wrap: wrap;
-  text-align: center;
-  justify-content: center;
-  background-color: white;
-  border: 10px solid black;
+  line-height: 50px;
+} 
+
+.section-wrap {
+  flex-direction: column;
+  margin: 10px;
+  flex: 1;
 }
 
 .img {
-  margin: 0px 10px 10px 10px;
+  margin: 10px 10px 10px 10px;
   display: flex;
   flex-wrap: wrap;
-  min-width: 350px;
+  flex: 1 1 250px;
+  width: 100%;
 }
 
 .footer {
+  padding-left: 10px;
+  padding-right: 10px;
   margin-top: 15px;
   min-width: 420px;
   font-size: 1rem;

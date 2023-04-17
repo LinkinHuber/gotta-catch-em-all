@@ -9,7 +9,7 @@ document.getElementById("search-btn").addEventListener("click", function(event) 
   fetchPokemon();
 });
 
-async function fetchPokemon(){
+async function fetchPokemon() {
   var api = "https://pokeapi.co/api/v2/pokemon/" + pokemonSearch;
   var response = await fetch(api);
   var data = await response.json();
@@ -25,7 +25,7 @@ function parseTypes(types) {
   if (types.length > 1) {
     response += ", " + types[1].type.name;
   }
-  return response
+  return response;
 }
 function parseAbilities(abilities) {
   var response = "Abilities: " + abilities[0].ability.name;
