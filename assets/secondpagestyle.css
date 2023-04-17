@@ -31,7 +31,7 @@ body {
   border: 10px solid black;
 }
 
-.div1 {
+.section1 {
   min-width: 380px;
   max-width: 50%;
   padding-bottom: 10px;
@@ -56,7 +56,7 @@ body {
   border: 5px solid black;
 }
 
-.div2 {
+.section2 {
   margin: 0px 0px 10px 10px;
   min-width: 380px;
   width: 50%;
