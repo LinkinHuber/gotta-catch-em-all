@@ -17,15 +17,18 @@ async function fetchPokemon() {
   pic.src = urlArtwork;
 }
 
-
 var queryString = "./secondpageindex.html"; 
-
 
 document.getElementById("search-btn").addEventListener("click", function(event) {
   event.preventDefault();
   pokemonSearch = document.querySelector("input").value;
-  fetchPokemon();
+  // Validation and formatting (how are we interacting with weird cases, i.e., Mr. Mime)
+  localStorage.setItem('pokemonSearch', JSON.stringify(pokemonSearch));
+  var queryString = `./secondpageindex.html?pokemon=${pokemonSearch}`; 
+  console.log(queryString)
   location.assign(queryString);
-});
 
-localStorage.setItem('pokemonSearch', JSON.stringify(pokemonSearch)); 
+  // fetchPokemon(pokemonSearch).then(pokemon => {
+  //   console.log(pokemon)
+  // })
+});
