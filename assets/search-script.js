@@ -9,7 +9,7 @@ console.log(initialSearch)
 
 document.getElementById("search-btn").addEventListener("click", function(event) {
   event.preventDefault();
-  pokemonSearch = document.querySelector("input").value;
+  pokemonSearch = document.querySelector("input").value.toLowerCase();
   aud_play_pause()
   fetchPokemon();
 });
@@ -56,4 +56,5 @@ function displayPokemon() {
   document.getElementById("result-type").innerHTML = (parseTypes(pokemon.types));
 }
 localStorage.setItem('pokemon', JSON.stringify(pokemon)); 
+
 fetchPokemon()
