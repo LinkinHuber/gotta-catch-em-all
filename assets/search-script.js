@@ -10,8 +10,15 @@ console.log(initialSearch)
 document.getElementById("search-btn").addEventListener("click", function(event) {
   event.preventDefault();
   pokemonSearch = document.querySelector("input").value;
+  aud_play_pause()
   fetchPokemon();
 });
+function aud_play_pause() {
+  var myAudio = document.getElementById("myAudio");
+  console.log(myAudio)
+    myAudio.play();
+
+}
 
 async function fetchPokemon(){
   var api = "https://pokeapi.co/api/v2/pokemon/" + pokemonSearch;
