@@ -1,28 +1,29 @@
 var pokemonName;
 var pokemonSearch = "";
 
+
+  // add function to play audio on button press
 function aud_play_pause() {
   var myAudio = document.getElementById("myAudio");
-  console.log(myAudio)
     myAudio.play();
 }
+
+  // add function to fetch pokemon info from api
 async function fetchPokemon() {
   var api = "https://pokeapi.co/api/v2/pokemon/" + pokemonSearch;
   var response = await fetch(api);
   var data = await response.json();
+
+  // get picture of pokemon being searched from api
   var urlArtwork = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + data.id + ".png";
-  var pokemon = data  
-  console.log(pokemon.name);
-  console.log(pokemon.weight);
-  console.log(pokemon.height);
-  console.log(urlArtwork);
-  console.log(data);
   var pic =  document.getElementById("result-img");
-  pic.src = urlArtwork;
+  pic.src = urlArtwork; 
 }
 
+  //navigate to seconD html page
 var queryString = "./secondpageindex.html"; 
 
+  // add event listener so pokemon is searched when enter is pressed
 var input = document.getElementById("search-bar");
 input.addEventListener("keypress", function(event) {
   if (event.key === "Enter") {
@@ -31,6 +32,7 @@ input.addEventListener("keypress", function(event) {
   }
 });
 
+  //add event listner to search for pokemon stats on mouse click
 document.getElementById("search-btn").addEventListener("click", function(event) {
   event.preventDefault();
   aud_play_pause();
@@ -40,17 +42,11 @@ document.getElementById("search-btn").addEventListener("click", function(event) 
   if (!pokemonSearch){
     pokemonSearch = Math.floor(Math.random() * (1010 - 1 + 1) + 1)
   }
+  
   // Validation and formatting (how are we interacting with weird cases, i.e., Mr. Mime)
   localStorage.setItem('pokemonSearch', JSON.stringify(pokemonSearch));
   var queryString = `./secondpageindex.html?pokemon=${pokemonSearch}`; 
-  console.log(queryString)
   setTimeout(()=> {
     location.assign(queryString.toLowerCase())
   }, 1100)
-
-  // location.assign(queryString);
-
-  // fetchPokemon(pokemonSearch).then(pokemon => {
-  //   console.log(pokemon)
-  // })
 });
