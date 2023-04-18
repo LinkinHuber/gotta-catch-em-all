@@ -1,8 +1,7 @@
 var pokemonName;
 var pokemonSearch = "";
 
-
-  // add function to play audio on button press
+  // add function to play audio when either "enter" is pressed or "Search" button is clicked
 function aud_play_pause() {
   var myAudio = document.getElementById("myAudio");
     myAudio.play();
@@ -20,10 +19,10 @@ async function fetchPokemon() {
   pic.src = urlArtwork; 
 }
 
-  //navigate to seconD html page
+  // navigate to second html page
 var queryString = "./secondpageindex.html"; 
 
-  // add event listener so pokemon is searched when enter is pressed
+  // add event listener so pokemon is searched when "enter" is pressed
 var input = document.getElementById("search-bar");
 input.addEventListener("keypress", function(event) {
   if (event.key === "Enter") {
@@ -32,7 +31,7 @@ input.addEventListener("keypress", function(event) {
   }
 });
 
-  //add event listner to search for pokemon stats on mouse click
+  // add event listener so pokemon is searched when the "Search" button is clicked. Also loads a random pokemon if nothing is inputed and user presses "enter" or clicks the "Search" button
 document.getElementById("search-btn").addEventListener("click", function(event) {
   event.preventDefault();
   aud_play_pause();
@@ -43,7 +42,7 @@ document.getElementById("search-btn").addEventListener("click", function(event) 
     pokemonSearch = Math.floor(Math.random() * (1010 - 1 + 1) + 1)
   }
   
-  // Validation and formatting (how are we interacting with weird cases, i.e., Mr. Mime)
+  // saves inputed pokemon to local storage and sets a timout
   localStorage.setItem('pokemonSearch', JSON.stringify(pokemonSearch));
   var queryString = `./secondpageindex.html?pokemon=${pokemonSearch}`; 
   setTimeout(()=> {
