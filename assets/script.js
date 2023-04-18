@@ -23,6 +23,14 @@ async function fetchPokemon() {
 
 var queryString = "./secondpageindex.html"; 
 
+var input = document.getElementById("search-bar");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("search-btn").click();
+  }
+});
+
 document.getElementById("search-btn").addEventListener("click", function(event) {
   event.preventDefault();
   aud_play_pause();
