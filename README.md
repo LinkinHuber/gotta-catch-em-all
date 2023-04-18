@@ -18,7 +18,6 @@ THEN sound event occurs
 WHEN API is called
 THEN data is displayed for the user
 
-
 ## Deployed Pages Link
 
 - https://linkinhuber.github.io/gotta-catch-em-all/
@@ -28,4 +27,3 @@ THEN data is displayed for the user
 ![Screenshot of home page](./assets/images/Screenshot%202023-04-18%20132822.png)
 
 ![Screenshot of home page](./assets/images/Screenshot%202023-04-18%20132856.png)
-
