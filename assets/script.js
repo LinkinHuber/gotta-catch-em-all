@@ -35,6 +35,8 @@ document.getElementById("search-btn").addEventListener("click", function(event) 
   event.preventDefault();
   aud_play_pause();
   pokemonSearch = document.querySelector("input").value;
+  var element = document.getElementById('search-bar');
+  element.value=""
   if (!pokemonSearch){
     pokemonSearch = Math.floor(Math.random() * (1010 - 1 + 1) + 1)
   }

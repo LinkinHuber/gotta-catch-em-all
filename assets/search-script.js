@@ -16,6 +16,8 @@ input.addEventListener("keypress", function(event) {
 document.getElementById("search-btn").addEventListener("click", function(event) {
   event.preventDefault();
   pokemonSearch = document.querySelector("input").value.toLowerCase();
+  var element = document.getElementById('search-bar');
+  element.value=""
   if (!pokemonSearch){
     pokemonSearch = Math.floor(Math.random() * (1010 - 1 + 1) + 1)
   }
@@ -40,11 +42,11 @@ async function fetchPokemon() {
 
 }
 
-function RestrictSpaceSpecial(e) {
-  var k;
-  document.all ? k = e.keyCode : k = e.which;
-  return ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32 || (k >= 48 && k <= 57));
-  }
+// function RestrictSpaceSpecial(e) {
+//   var k;
+//   document.all ? k = e.keyCode : k = e.which;
+//   return ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32 || (k >= 48 && k <= 57));
+//   }
 
 function parseTypes(types) {
   var response = "Type: " + types[0].type.name;
