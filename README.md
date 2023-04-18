@@ -18,12 +18,9 @@ THEN sound event occurs
 WHEN API is called
 THEN data is displayed for the user
 
-
-
-<!-- TODO 
-** add screenshot of working site **
+! Here is a screenshot of the search page: https://github.com/LinkinHuber/gotta-catch-em-all/assets/images/Screenshot-2023-04-18-at-11.57.14.png
 
 https://github.com/LinkinHuber/gotta-catch-em-all
 
 ** add link to active site **
--->
+
