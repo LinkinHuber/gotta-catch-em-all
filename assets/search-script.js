@@ -7,7 +7,14 @@ var initialSearch = document.URL.split('=')[1]
 console.log(initialSearch)
 
 
-
+// Get the input field
+var input = document.getElementById("search-bar");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("search-btn").click();
+  }
+});
 document.getElementById("search-btn").addEventListener("click", function(event) {
   event.preventDefault();
   pokemonSearch = document.querySelector("input").value.toLowerCase();
@@ -21,7 +28,7 @@ function aud_play_pause() {
 
 }
 
-async function fetchPokemon(){
+async function fetchPokemon() {
   var api = "https://pokeapi.co/api/v2/pokemon/" + pokemonSearch;
   var response = await fetch(api);
   var data = await response.json();
@@ -43,7 +50,7 @@ function parseTypes(types) {
   if (types.length > 1) {
     response += ", " + types[1].type.name;
   }
-  return response
+  return response;
 }
 function parseAbilities(abilities) {
   var response = "Abilities: " + abilities[0].ability.name;

@@ -34,18 +34,19 @@ body {
 }
 
 .h2 {
-  padding-top: 40px;
+  padding-top: 8%;
+  padding-bottom: 2%;
 }
 
 .p {
   font-size: 1.2rem;
-  margin-left: 150px;
-  margin-right: 150px;
+  margin-left: 12%;
+  margin-right: 12%;
   margin-bottom: 40px;
 }
 
 .form {
-  padding-bottom: 40px;
+  padding-bottom: 8%;
 }
 
 .input {
@@ -60,6 +61,8 @@ body {
 }
 
 .footer {
+  padding-left: 10px;
+  padding-right: 10px;
   margin-top: 15px;
   min-width: 420px;
   font-size: 1rem;
