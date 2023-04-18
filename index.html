@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,25 +20,22 @@
   <main id="body" class="main">
     <h2 id="how" class="h2">How It Works...</h2>
       <p id="paragraph" class="p">
-        Have you ever wanted to  learn some basic facts about your favorite pokemon or any pokemon for that matter?
-        This is where "Pokemon Search" comes in... Simply enter a pokemon's name or ID and click the "Search" button. You will then be presented with some cool facts about that pokemon like their height, weight, abilities, and type. Plus a cool image of what that pokemon looks like. If you wish to search for another pokemon simply just rinse and repeat!
+        Have you ever wanted to learn some basic facts about your favorite pokemon or any pokemon for that matter? This is
+        where "Pokemon Search" comes in... Simply enter a pokemon's name or ID and press "enter" or click the "Search" button. You can also search without entering a name which brings up a random pokemon. You will then be presented with some cool facts about that pokemon like their name, height, weight, abilities, and type. Plus a cool image of what that pokemon looks like. If you wish to search for another pokemon simply just rinse and repeat!
       </p>
-        <form id="search" class="form">
-          <input id="search-bar" class="input" type="text" placeholder="pokemon name or ID">
-          <audio id="myAudio"><source src="./assets/audio/pikapika.ogg" type="audio/ogg"></audio>
-          <button id="search-btn" class="button" type="button" click="aud_play_pause()">Search</button>
-        </form>
+    <form id="search" class="form">
+      <input id="search-bar" class="input" type="text" placeholder="pokemon name or ID">
+      <audio id="myAudio">
+        <source src="./assets/audio/pikapika.ogg" type="audio/ogg">
+      </audio>
+      <button id="search-btn" class="button" type="button" click="aud_play_pause()">Search</button>
+    </form>
   </main>
+
   <footer id="conclusion" class="footer">
     <h3 id="by" class="h3">"Pokemon Search" was made by. Lucas, Jason, Patrick, Hana, and Linkin</h3>
   </footer>
 
-  <script src="./assets/script.js">
-   
-      function newFunction(){
-        var element = document.getElementById(" form_id ");
-         element.reset()
-      }
-  </script>
+  <script src="./assets/script.js"></script>
 </body>
 </html>
