@@ -7,7 +7,14 @@ var initialSearch = document.URL.split('=')[1]
 console.log(initialSearch)
 
 
-
+// Get the input field
+var input = document.getElementById("search-bar");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("search-btn").click();
+  }
+});
 document.getElementById("search-btn").addEventListener("click", function(event) {
   event.preventDefault();
   pokemonSearch = document.querySelector("input").value.toLowerCase();
