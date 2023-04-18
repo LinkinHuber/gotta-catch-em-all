@@ -1,7 +1,11 @@
 var pokemonName;
 var pokemonSearch = "";
 
-
+function aud_play_pause() {
+  var myAudio = document.getElementById("myAudio");
+  console.log(myAudio)
+    myAudio.play();
+}
 async function fetchPokemon() {
   var api = "https://pokeapi.co/api/v2/pokemon/" + pokemonSearch;
   var response = await fetch(api);
@@ -19,14 +23,30 @@ async function fetchPokemon() {
 
 var queryString = "./secondpageindex.html"; 
 
+var input = document.getElementById("search-bar");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("search-btn").click();
+  }
+});
+
 document.getElementById("search-btn").addEventListener("click", function(event) {
   event.preventDefault();
+  aud_play_pause();
   pokemonSearch = document.querySelector("input").value;
+  if (!pokemonSearch){
+    pokemonSearch = Math.floor(Math.random() * (1010 - 1 + 1) + 1)
+  }
   // Validation and formatting (how are we interacting with weird cases, i.e., Mr. Mime)
   localStorage.setItem('pokemonSearch', JSON.stringify(pokemonSearch));
   var queryString = `./secondpageindex.html?pokemon=${pokemonSearch}`; 
   console.log(queryString)
-  location.assign(queryString);
+  setTimeout(()=> {
+    location.assign(queryString.toLowerCase())
+  }, 1100)
+
+  // location.assign(queryString);
 
   // fetchPokemon(pokemonSearch).then(pokemon => {
   //   console.log(pokemon)

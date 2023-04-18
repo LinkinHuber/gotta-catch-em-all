@@ -2,14 +2,23 @@ var pokemonName;
 var pokemon;
 var pokemonSearch = document.URL.split('=')[1];
 var urlArtwork;
+var RestrictSpaceSpecial
 var initialSearch = document.URL.split('=')[1]
 console.log(initialSearch)
 
-
-
+var input = document.getElementById("search-bar");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("search-btn").click();
+  }
+});
 document.getElementById("search-btn").addEventListener("click", function(event) {
   event.preventDefault();
-  pokemonSearch = document.querySelector("input").value;
+  pokemonSearch = document.querySelector("input").value.toLowerCase();
+  if (!pokemonSearch){
+    pokemonSearch = Math.floor(Math.random() * (1010 - 1 + 1) + 1)
+  }
   aud_play_pause()
   fetchPokemon();
 });
@@ -20,7 +29,7 @@ function aud_play_pause() {
 
 }
 
-async function fetchPokemon(){
+async function fetchPokemon() {
   var api = "https://pokeapi.co/api/v2/pokemon/" + pokemonSearch;
   var response = await fetch(api);
   var data = await response.json();
@@ -31,22 +40,18 @@ async function fetchPokemon(){
 
 }
 
-
 function RestrictSpaceSpecial(e) {
   var k;
   document.all ? k = e.keyCode : k = e.which;
   return ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32 || (k >= 48 && k <= 57));
   }
 
-
-
-
 function parseTypes(types) {
   var response = "Type: " + types[0].type.name;
   if (types.length > 1) {
     response += ", " + types[1].type.name;
   }
-  return response
+  return response;
 }
 function parseAbilities(abilities) {
   var response = "Abilities: " + abilities[0].ability.name;
@@ -55,7 +60,6 @@ function parseAbilities(abilities) {
   }
   return response;
 }
-
 
 function displayPokemon() {
   var pic = document.getElementById("result-img");
@@ -67,4 +71,5 @@ function displayPokemon() {
   document.getElementById("result-type").innerHTML = (parseTypes(pokemon.types));
 }
 localStorage.setItem('pokemon', JSON.stringify(pokemon)); 
+
 fetchPokemon()
