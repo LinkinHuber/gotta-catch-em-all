@@ -6,8 +6,6 @@ var RestrictSpaceSpecial
 var initialSearch = document.URL.split('=')[1]
 console.log(initialSearch)
 
-
-// Get the input field
 var input = document.getElementById("search-bar");
 input.addEventListener("keypress", function(event) {
   if (event.key === "Enter") {
@@ -18,6 +16,9 @@ input.addEventListener("keypress", function(event) {
 document.getElementById("search-btn").addEventListener("click", function(event) {
   event.preventDefault();
   pokemonSearch = document.querySelector("input").value.toLowerCase();
+  if (!pokemonSearch){
+    pokemonSearch = Math.floor(Math.random() * (1010 - 1 + 1) + 1)
+  }
   aud_play_pause()
   fetchPokemon();
 });
